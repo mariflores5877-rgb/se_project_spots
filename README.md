@@ -23,4 +23,4 @@ My images were exported from the Figma frames already set up for me; and every b
 Check out this video https://drive.google.com/file/d/1pd3PTA7MUqyUqXNGCaRcTHN3FP_7Z7Dq/view?usp=sharing , where I describe my project and some of the challenges I was facing in the process.
 
 **GitHub Pages**
-[Here is the link to GitHub Pages] (https://mariflores5877-rgb.github.io/se_project_spots/)
+[Deployment Link] (https://mariflores5877-rgb.github.io/se_project_spots/)
