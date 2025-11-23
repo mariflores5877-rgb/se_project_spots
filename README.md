@@ -1,21 +1,20 @@
 # Project 3: Spots
 
-### Overview  
+### Overview
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+- Description
+- Figma
+- Images
+
+**Description**
+
+This project was an experience in responsive design--the practice of adjusting the webpage to fit to different screen sizes. Also included was the design tool Figma, which was instrumental in the making of the responsive layout.
+
+**Figma**
+
+- [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
+  Figma was already set up for the Spots project with a layout to work with on my own coding. I used the figma frames to help me with my css files and further my comprehension on responsive designing.
+
+**Images**
+
+My images were exported from the Figma frames already set up for me; and every button, pencil, heart, and image was recieved my downloaded Figma images
