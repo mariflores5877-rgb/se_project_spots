@@ -55,7 +55,7 @@
 }
 
 .profile__edit-btn:hover {
-  opacity: rgba(33, 33, 33, 0.5);
+  opacity: 1;
 }
 
 .profile__add-btn {
@@ -66,10 +66,16 @@
   color: rgba(252, 245, 229, 1);
   background-color: rgba(33, 33, 33, 1);
   transition: background-color 0.5s ease-in;
+  border: none;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
 }
 
 .profile__add-btn:hover {
   background-color: rgba(33, 33, 33, 0.8);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
@@ -99,6 +105,10 @@
 
   .profile__column {
     margin: 0 0 20px;
+  }
+
+  .profile__edit-btn {
+    margin: 0 auto;
   }
 
   .profile__add-btn {

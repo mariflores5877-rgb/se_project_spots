@@ -20,7 +20,7 @@ This project was an experience in responsive design--the practice of adjusting t
 My images were exported from the Figma frames already set up for me; and every button, pencil, heart, and image was recieved my downloaded Figma images
 
 **ProjectPitch Link**
-Check out this video https://drive.google.com/file/d/1pd3PTA7MUqyUqXNGCaRcTHN3FP_7Z7Dq/view?usp=sharing , where I describe my project and some of the challenges I was facing in the process.
+Check out this video https://drive.google.com/file/d/1-AAC_5TnIw9BhX3owNMd1p9xQOrxSfxt/view?usp=sharing , where I describe my project and some of the challenges I was facing in the process.
 
 **GitHub Pages**
 [Deployment Link](https://mariflores5877-rgb.github.io/se_project_spots/)
