@@ -1,0 +1,91 @@
+[33mcommit 3d7f95a82c26be5816504861bbf88cc6c606b02b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Marisol Flores <mariflores5877@gmail.com>
+Date:   Wed Dec 24 23:57:51 2025 -0600
+
+    Revert "New updates for the project"
+    
+    This reverts commit 34e0317fa9ff525035a8d64e5ee384ca81759ab8.
+
+[33mcommit 34e0317fa9ff525035a8d64e5ee384ca81759ab8[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Marisol Flores <mariflores5877@gmail.com>
+Date:   Tue Dec 23 04:52:34 2025 -0600
+
+    New updates for the project
+
+[33mcommit 2a5ae74523e9fdff921d962c32ff810c28f1d04d[m
+Author: Marisol Flores <mariflores5877@gmail.com>
+Date:   Sun Dec 21 16:50:06 2025 -0600
+
+    New updates for my project
+
+[33mcommit b2ef9699cbe00469282b0f70cabac081de084fe1[m
+Author: Marisol Flores <mariflores5877@gmail.com>
+Date:   Sun Dec 21 12:35:36 2025 -0600
+
+    New updates for my project
+
+[33mcommit 9b01c76583b552cbf5a2ecdec3282fd7a405cec6[m
+Author: Marisol Flores <mariflores5877@gmail.com>
+Date:   Sun Dec 21 10:33:50 2025 -0600
+
+    New improvement for my project
+
+[33mcommit 249768545edcc3cdebfee5ba2b5430d3bafbbdb3[m
+Author: Marisol Flores <mariflores5877@gmail.com>
+Date:   Sun Dec 7 11:21:46 2025 -0600
+
+    New updates and improvements for my project
+
+[33mcommit 40dbcd402d4ba1801fe390195a4fa0dff0753447[m
+Author: Marisol Flores <mariflores5877@gmail.com>
+Date:   Sat Dec 6 09:03:53 2025 -0600
+
+    New updates and additions for my project
+
+[33mcommit eda50d76a152ad77f7322be363b9139e4bc223c7[m
+Author: Marisol Flores <mariflores5877@gmail.com>
+Date:   Wed Dec 3 06:05:28 2025 -0600
+
+    New updates for my project
+
+[33mcommit fed03cec08a7cdf268465570907d8534c5d26a23[m
+Author: Marisol Flores <mariflores5877@gmail.com>
+Date:   Mon Dec 1 18:41:19 2025 -0600
+
+    New updates for my project
+
+[33mcommit f088195c8d62bdb6611978bd3c6d01a86a4822f5[m
+Author: Marisol Flores <mariflores5877@gmail.com>
+Date:   Mon Nov 24 23:08:49 2025 -0600
+
+    New updates and corrections
+
+[33mcommit 7f83aec276d8677a8d9ad127b1a11f0cc55991be[m
+Author: Marisol Flores <mariflores5877@gmail.com>
+Date:   Sun Nov 23 15:50:45 2025 -0600
+
+    docs: add ProjectPitch link
+
+[33mcommit 88513cc42171307f09d60bab96305d49dd3565e4[m
+Author: Marisol Flores <mariflores5877@gmail.com>
+Date:   Sun Nov 23 15:49:05 2025 -0600
+
+    docs: add deployment link
+
+[33mcommit 962f248d514bc333415f17d5f2ad9b6370bd8d08[m
+Author: Marisol Flores <mariflores5877@gmail.com>
+Date:   Sun Nov 23 15:26:42 2025 -0600
+
+    docs: add readme
+
+[33mcommit afd5a5d4b54b695b31302950e60b86426c4e6975[m
+Author: Marisol Flores <mariflores5877@gmail.com>
+Date:   Sat Nov 22 07:02:41 2025 -0600
+
+    New updates and imporvements for project
+
+[33mcommit df05e7b25e421154e6a0885edd91a0b82681f00b[m
+Author: mariflores5877-rgb <mariflores5877@gmail.com>
+Date:   Thu Nov 20 21:41:57 2025 -0600
+
+    Initial commit
