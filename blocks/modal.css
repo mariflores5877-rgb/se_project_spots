@@ -14,6 +14,10 @@
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
+.modal_type_preview {
+  padding: 0 16px;
+}
+
 .modal_is_opened {
   visibility: visible;
   opacity: 1;
@@ -31,20 +35,39 @@
   position: relative;
 }
 
-.modal__close-btn {
+.modal__close-bttn {
   position: absolute;
   top: 32px;
   right: 50px;
   width: 40px;
   height: 40px;
-  border: 2px;
+  border: none;
+  transition: 0.3s;
+
   padding: 0;
-  opacity: 40%;
-  background: #ffffff;
+  opacity: 0.4;
+  background: transparent url("../images/close-icon.svg") center no-repeat;
   cursor: pointer;
 }
 
-.modal__close-btn:hover {
+/* how exactly am I supposed to make the close button white? */
+.modal__close_type_preview {
+  top: 0;
+  right: -52.5px;
+  border: 2px;
+  outline: none;
+  color: #ffffff;
+  cursor: pointer;
+  transition: opacity 150ms ease;
+}
+
+.modal__close_type_review:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  background-color: #333;
+}
+
+.modal__close-bttn:hover {
   opacity: 0.8;
 }
 
@@ -101,6 +124,37 @@
   background-color: #000000;
 }
 
+.modal__image-container {
+  position: relative;
+}
+
+.modal__image {
+  max-width: 80vw;
+  max-height: 80vh;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+}
+
+.modal__caption {
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  padding: 4px 8px;
+  background-color: #212121;
+  border-radius: 8px;
+  display: inline-block;
+  position: absolute;
+  bottom: -60px;
+}
+
+/* I attempted to do the bottom w/h 8px,
+but for some reason, the caption rested on the lower-left of the image;
+and no matter what I tried to do, the -60 was the closest I could make it
+to looking like the Figma model. */
+
 @media screen and (max-width: 480px) {
   .modal__container {
     padding: 22px 12px 12px;
@@ -110,9 +164,13 @@
     font-size: 20px;
   }
 
-  .modal__close-btn {
+  .modal__close-bttn {
     top: 16px;
     right: 12px;
+  }
+
+  .modal__form {
+    margin-top: 34px;
   }
 
   .modal__submit-btn {
@@ -121,5 +179,16 @@
 
   .modal__input {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 627px) {
+  .modal__close_type_preview {
+    top: -48px;
+    right: 0;
+  }
+
+  .modal__image {
+    max-width: unset;
   }
 }
