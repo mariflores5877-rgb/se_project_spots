@@ -108,8 +108,8 @@ function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
   const inputValues = {
-    name: cardImageInput.value,
-    link: cardDescriptionInput.value,
+    name: cardDescriptionInput.value,
+    link: cardImageInput.value,
   };
 
   const cardElement = getCardElement(inputValues);
@@ -126,7 +126,7 @@ function getCardElement(data) {
 
   cardImage.src = data.link;
   cardImage.alt = data.name;
-  cardTitle.textContent = data.title;
+  cardTitle.textContent = data.name;
 
   const cardLikeBtn = cardElement.querySelector(".card__like-button");
   cardLikeBtn.addEventListener("click", () => {
@@ -140,7 +140,8 @@ function getCardElement(data) {
 
   cardImage.addEventListener("click", () => {
     previewImage.src = data.link;
-    previewName.alt = data.link;
+    previewImage.alt = data.name;
+    previewName.textContent = data.name;
     openModal(previewModal);
   });
 
@@ -149,5 +150,5 @@ function getCardElement(data) {
 
 initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
-  cardsList.append(cardElement);
+  cardsList.prepend(cardElement);
 });

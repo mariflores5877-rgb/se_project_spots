@@ -12,6 +12,13 @@
   display: block;
   border-radius: 8px;
   margin-bottom: 12px;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card__image:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
 }
 
 .card__content {
@@ -31,7 +38,7 @@
   max-width: 190px;
 }
 
-.card__delete-button {
+.card__delete-btn {
   background: url(../images/delete.svg);
   background-color: transparent;
   background-repeat: no-repeat;
@@ -45,7 +52,7 @@
   transition: opacity 150ms ease;
 }
 
-.card__delete-button:hover {
+.card__delete-btn:hover {
   background-image: url(../images/delete-hover.svg);
   opacity: 1;
 }

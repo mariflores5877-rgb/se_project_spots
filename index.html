@@ -84,15 +84,49 @@
         </div>
       </div>
 
-      <div class="modal modal_type_preview" id="preview-modal">
-        <div class="modal__image-container">
-          <button type="button" class="modal__close-btn modal__close_type_preview">
+      <div class="modal" id="new-post-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn">
             <img src="./images/close-icon.svg" alt="exit_button" />
           </button>
-          <img src="#" alt="" class="modal__image">
-          <p class="modal__caption"></p>
+          <h2 class="modal__title">New Post</h2>
+          <form class="modal__form">
+            <label for="card-image-input" class="modal__label">
+              Image link
+              <input
+                id="card-image-input"
+                type="text"
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+              />
+            </label>
+            <label for="card-descriptive-input" class="modal__label">
+              Caption
+              <input
+                id="card-descriptive-input"
+                type="text"
+                class="modal__input"
+                placeholder="Type your caption"
+              />
+            </label>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
+        </div>
       </div>
+
+      <div class="modal modal__close-btn_type_preview" id="preview-modal">
+        <div class="modal__image-container">
+          <button
+            type="button"
+            class="modal__close-btn modal__close-btn_type_preview"
+          >
+            <img src="./images/close-icon.svg" alt="exit_button" />
+          </button>
+          <img src="#" alt="" class="modal__image" />
+          <p class="modal__caption"></p>
+        </div>
+      </div>
+      <script src="./scripts/index.js"></script>
     </div>
-    <script src="./scripts/index.js"></script>
   </body>
 </html>
