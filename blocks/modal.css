@@ -54,16 +54,9 @@
 .modal__close-btn_type_preview {
   top: 0;
   right: -52.5px;
-  border: 2px solid #fff;
   outline: none;
   cursor: pointer;
   transition: opacity 150ms ease;
-}
-
-.modal__close-btn_type_preview:hover {
-  opacity: 0.7;
-  cursor: pointer;
-  background-color: #333;
 }
 
 .modal__close-btn:hover {

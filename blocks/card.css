@@ -16,11 +16,6 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.card__image:hover {
-  opacity: 0.8;
-  transform: scale(1.05);
-}
-
 .card__content {
   display: flex;
   align-items: center;
