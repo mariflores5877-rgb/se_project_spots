@@ -11,7 +11,9 @@
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .modal_type_preview {
@@ -50,7 +52,6 @@
   cursor: pointer;
 }
 
-/* how exactly am I supposed to make the close button white? */
 .modal__close-btn_type_preview {
   top: 0;
   right: -52.5px;
@@ -81,6 +82,8 @@
 
 .modal__label {
   margin: 0 0 32px;
+  margin-bottom: 32px;
+  display: block;
 }
 
 .modal__input {
@@ -95,6 +98,12 @@
 
 .modal__input::placeholder {
   color: #2121214d;
+}
+
+.error {
+  display: block;
+  margin-top: 8px;
+  color: #ff0000b2;
 }
 
 .modal__submit-btn {
@@ -113,6 +122,12 @@
 
 .modal__submit-btn:hover {
   background-color: #000000;
+}
+
+/*check to see if you actaully need this*/
+.modal__submit-btn:disabled {
+  color: #212121;
+  opacity: 0.5;
 }
 
 .modal__image-container {
