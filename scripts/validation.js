@@ -1,5 +1,7 @@
 const checkInputValidity = (formElement, inputElement) => {
-  console.log(inputElement.validity);
+  if (!inputElement.validity.valid) {
+    showInputError(formElement, inputElement, inputElement.validationMessage);
+  }
 };
 
 const toggleButtonState = (inputList, button) => {
