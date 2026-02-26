@@ -1,3 +1,7 @@
+const showInputError = (formElement, inputElement, errorMsg) => {
+  const errorMsgElement = document.querySelector(`#${inputElement.id}-error`);
+};
+
 const checkInputValidity = (formElement, inputElement) => {
   if (!inputElement.validity.valid) {
     showInputError(formElement, inputElement, inputElement.validationMessage);
@@ -10,7 +14,7 @@ const toggleButtonState = (inputList, button) => {
 };
 
 const setEventListeners = (formElement) => {
-  const inputList = Array.from(formLmnt.querySelectorAll(".modal__input"));
+  const inputList = Array.from(formElement.querySelectorAll(".modal__input"));
   const submitBtn = formElement.querySelector(".modal__submit-btn");
 
   toggleButtonState(inputList, submitBtn);
