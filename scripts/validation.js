@@ -1,34 +1,34 @@
-const checkInputValidity = (formLmnt, nputLement) => {
-  console.log(nputLement.validity);
+const checkInputValidity = (formElement, inputElement) => {
+  console.log(inputElement.validity);
 };
 
-const toggleButtonState = (spotsNputList, button) => {
-  const hasInvalidInput = spotsNputList.some((input) => !input.validity.valid);
+const toggleButtonState = (inputList, button) => {
+  const hasInvalidInput = inputList.some((input) => !input.validity.valid);
   button.disabled = hasInvalidInput;
 };
 
 const setEventListeners = (formLmnt) => {
-  const spotsNputList = Array.from(formLmnt.querySelectorAll(".modal__input"));
-  const sbmtBtn = formLmnt.querySelector(".modal__submit-btn");
+  const inputList = Array.from(formLmnt.querySelectorAll(".modal__input"));
+  const submitBtn = formLmnt.querySelector(".modal__submit-btn");
 
-  toggleButtonState(spotsNputList, sbmtBtn);
+  toggleButtonState(inputList, submitBtn);
 
-  spotsNputList.forEach((nputLement) => {
-    nputLement.addEventListener("input", () => {
-      checkInputValidity(formLmnt, nputLement);
-      toggleButtonState(spotsNputList, sbmtBtn);
+  inputList.forEach((inputElement) => {
+    inputElement.addEventListener("input", () => {
+      checkInputValidity(formElement, inputElement);
+      toggleButtonState(inputList, submitBtn);
     });
-    nputLement.addEventListener("blur", () => {
-      checkInputValidity(formLmnt, nputLement);
-      toggleButtonState(spotsNputList, sbmtBtn);
+    inputElement.addEventListener("blur", () => {
+      checkInputValidity(formElement, inputElement);
+      toggleButtonState(inputList, submitBtn);
     });
   });
 };
 
 function enableValidation() {
   const spotsFormList = Array.from(document.querySelectorAll(".modal__form"));
-  spotsFormList.forEach((formLmnt) => {
-    setEventListeners(formLmnt);
+  spotsFormList.forEach((formElement) => {
+    setEventListeners(formElement);
   });
 }
 
