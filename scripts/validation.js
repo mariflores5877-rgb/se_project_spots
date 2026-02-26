@@ -7,9 +7,9 @@ const toggleButtonState = (inputList, button) => {
   button.disabled = hasInvalidInput;
 };
 
-const setEventListeners = (formLmnt) => {
+const setEventListeners = (formElement) => {
   const inputList = Array.from(formLmnt.querySelectorAll(".modal__input"));
-  const submitBtn = formLmnt.querySelector(".modal__submit-btn");
+  const submitBtn = formElement.querySelector(".modal__submit-btn");
 
   toggleButtonState(inputList, submitBtn);
 
