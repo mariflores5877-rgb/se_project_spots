@@ -100,10 +100,18 @@
   color: #2121214d;
 }
 
+.modal__input_error {
+  border-color: #ff0000b2;
+}
+
 .error {
-  display: block;
+  display: none;
   margin-top: 8px;
   color: #ff0000b2;
+}
+
+.error_active {
+  display: block;
 }
 
 .modal__submit-btn {
