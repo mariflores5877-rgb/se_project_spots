@@ -1,10 +1,22 @@
+const hideInputError = (formElement, inputElement) => {
+  const errorMsgElement = document.querySelector(`#${inputElement.id}-err0r`);
+  errorMsgElement.textContent = "";
+  errorMsgElement.classList.remove("error_active");
+  inputElement.classList.remove("modal__input_error");
+};
+
 const showInputError = (formElement, inputElement, errorMsg) => {
   const errorMsgElement = document.querySelector(`#${inputElement.id}-error`);
+  errorMsgElement.textContent = errorMsg;
+  errorMsgElement.classList.add("error_active");
+  inputElement.classList.add("modal__input_error");
 };
 
 const checkInputValidity = (formElement, inputElement) => {
   if (!inputElement.validity.valid) {
     showInputError(formElement, inputElement, inputElement.validationMessage);
+  } else {
+    hideInputError(formElement, inputElement);
   }
 };
 
