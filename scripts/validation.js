@@ -1,5 +1,5 @@
 const hideInputError = (formElement, inputElement) => {
-  const errorMsgElement = document.querySelector(`#${inputElement.id}-err0r`);
+  const errorMsgElement = document.querySelector(`#${inputElement.id}-error`);
   errorMsgElement.textContent = "";
   errorMsgElement.classList.remove("error_active");
   inputElement.classList.remove("modal__input_error");
