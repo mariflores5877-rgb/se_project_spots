@@ -101,7 +101,7 @@
 }
 
 .modal__input_error {
-  border-color: #ff0000b2;
+  border: 1px solid #ff000099;
 }
 
 .error {
@@ -129,14 +129,13 @@
 }
 
 .modal__submit-btn:hover {
-  background-color: #000000;
+  background-color: #212121cc;
 }
 
 /*check to see if you actaully need this*/
-.modal__submit-btn:disabled {
-  color: #212121;
-  opacity: 0.5;
-}
+/*.modal__submit-btn:disabled {
+  background-color: #212121cc;
+} */
 
 .modal__image-container {
   position: relative;
