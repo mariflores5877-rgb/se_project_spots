@@ -132,10 +132,9 @@
   background-color: #212121cc;
 }
 
-/*check to see if you actaully need this*/
-/*.modal__submit-btn:disabled {
+.modal__submit-btn:disabled {
   background-color: #212121cc;
-} */
+}
 
 .modal__image-container {
   position: relative;

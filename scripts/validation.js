@@ -27,9 +27,9 @@ const hasInvalidInput = (inputList) => {
 };
 
 const toggleButtonState = (inputList, submitBtn) => {
-
+  if (hasInvalidInput(inputList)) {
+    submitBtn.disabled = hasInvalidInput(inputList);
   }
-
 };
 
 const setEventListeners = (formElement) => {
