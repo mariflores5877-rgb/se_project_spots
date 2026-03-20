@@ -45,10 +45,6 @@ const setEventListeners = (formElement) => {
       checkInputValidity(formElement, inputElement);
       toggleButtonState(inputList, submitBtn);
     });
-    inputElement.addEventListener("blur", () => {
-      checkInputValidity(formElement, inputElement);
-      toggleButtonState(inputList, submitBtn);
-    });
   });
 };
 
