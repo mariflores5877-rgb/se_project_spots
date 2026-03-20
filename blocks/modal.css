@@ -98,7 +98,7 @@
 }
 
 .modal__input:hover {
-  border: 1px #212121;
+  border: 1px rgba(33, 33, 33, 1);
   cursor: pointer;
 }
 
