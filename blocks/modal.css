@@ -98,7 +98,7 @@
 }
 
 .modal__input:hover {
-  border: 1px rgba(33, 33, 33, 1);
+  border: 1px solid rgba(33, 33, 33, 1);
   cursor: pointer;
 }
 
@@ -139,7 +139,9 @@
 }
 
 .modal__submit-btn:disabled {
-  background-color: #212121cc;
+  background-color: #212121;
+  color: #fcf5e5;
+  opacity: 0.5;
 }
 
 .modal__image-container {
