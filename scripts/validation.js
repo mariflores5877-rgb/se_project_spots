@@ -1,3 +1,11 @@
+const config = {
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__submit-btn",
+  inactiveButtonClass: "modal__submit-btn_disabled",
+  inputErrorClass: "modal__input_error",
+  errorClass: "error__active",
+};
+
 const hideInputError = (formElement, inputElement) => {
   const errorMsgElement = document.querySelector(`#${inputElement.id}-error`);
   errorMsgElement.textContent = "";
@@ -32,6 +40,30 @@ const toggleButtonState = (inputList, submitBtn) => {
   } else {
     submitBtn.disabled = false;
   }
+};
+
+const disableBtn = (buttonElement) => {
+  buttonElement.disabled = true;
+};
+
+const disableAllSubmitBtns = (buttonElements) => {
+  buttonElements.forEach(disableBtn);
+};
+
+const resetValidation = (formElement, config) => {
+  const inputList = Array.from(
+    formElement.querySelectorAll(config.inputSelector),
+  );
+
+  inputList.forEach((inputElement) => {
+    hideInputError(formElement, inputElement, config);
+  });
+
+  toggleButtonState(
+    inputList,
+    formElement.querySelector(config.submitButtonSelector),
+    config,
+  );
 };
 
 const setEventListeners = (formElement) => {
