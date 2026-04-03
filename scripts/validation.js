@@ -87,4 +87,4 @@ function enableValidation() {
   });
 }
 
-enableValidation();
+enableValidation(config);
