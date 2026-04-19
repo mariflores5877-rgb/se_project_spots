@@ -1,4 +1,5 @@
 const settings = {
+  formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit-btn",
   inactiveButtonClass: "modal__submit-btn_disabled",
@@ -42,11 +43,11 @@ const toggleButtonState = (inputList, submitBtn) => {
   }
 };
 
-const disableBtn = (buttonElement) => {
+const disableBtn = (buttonElement, settings) => {
   buttonElement.disabled = true;
 };
 
-const disableAllSubmitBtns = (buttonElements) => {
+const disableAllSubmitBtns = (buttonElements, settings) => {
   buttonElements.forEach(disableBtn);
 };
 
@@ -66,24 +67,28 @@ const resetValidation = (formElement, settings) => {
   );
 };
 
-const setEventListeners = (formElement) => {
-  const inputList = Array.from(formElement.querySelectorAll(".modal__input"));
-  const submitBtn = formElement.querySelector(".modal__submit-btn");
+const setEventListeners = (formElement, settings) => {
+  const inputList = Array.from(
+    formElement.querySelectorAll(settings.inputSelector),
+  );
+  const submitBtn = formElement.querySelector(settings.submitButtonSelector);
 
-  toggleButtonState(inputList, submitBtn);
+  toggleButtonState(inputList, submitBtn, settings);
 
   inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", () => {
-      checkInputValidity(formElement, inputElement);
-      toggleButtonState(inputList, submitBtn);
+      checkInputValidity(formElement, inputElement, settings);
+      toggleButtonState(inputList, submitBtn, settings);
     });
   });
 };
 
 function enableValidation(settings) {
-  const spotsFormList = Array.from(document.querySelectorAll(".modal__form"));
+  const spotsFormList = Array.from(
+    document.querySelectorAll(settings.formSelector),
+  );
   spotsFormList.forEach((formElement) => {
-    setEventListeners(formElement);
+    setEventListeners(formElement, settings);
   });
 }
 
