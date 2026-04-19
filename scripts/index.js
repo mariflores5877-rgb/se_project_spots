@@ -68,6 +68,25 @@ const cardTemplate = document
   .content.querySelector(".card");
 const cardsList = document.querySelector(".cards__list");
 
+const modals = document.querySelectorAll(".modal");
+
+modals.forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    if (evt.target === modal) {
+      closeModal(modal);
+    }
+  });
+});
+
+document.addEventListener("keydown", (evt) => {
+  if (evt.key === "Escape") {
+    const openModal = document.querySelector(".modal_is_opened");
+    if (openModal) {
+      closeModal(openModal);
+    }
+  }
+});
+
 function openModal(modal) {
   modal.classList.add("modal_is_opened");
 }
@@ -82,8 +101,9 @@ editProfileBtn.addEventListener("click", function () {
   toggleButtonState(
     [editProfileNameInput, editProfileDescriptionInput],
     editProfileForm.querySelector(".modal__submit-btn"),
+    settings,
   );
-  resetValidation(editProfileForm, config);
+  resetValidation(editProfileForm, settings);
   openModal(editProfileModal);
 });
 
@@ -93,7 +113,7 @@ editProfileClosedBtn.addEventListener("click", function () {
 
 newPostBtn.addEventListener("click", function () {
   newPostForm.reset();
-  resetValidation(newPostForm, config);
+  resetValidation(newPostForm, settings);
   openModal(newPostModal);
 });
 
@@ -127,7 +147,7 @@ function handleAddCardSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   newPostForm.reset();
-  disableAllSubmitBtns([editProfileSubmitButton, cardSubmitButton]);
+  disableAllSubmitBtns([editProfileSubmitButton, cardSubmitButton], settings);
   closeModal(newPostModal);
 }
 
