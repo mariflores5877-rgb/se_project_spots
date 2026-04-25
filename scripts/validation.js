@@ -4,21 +4,25 @@ const settings = {
   submitButtonSelector: ".modal__submit-btn",
   inactiveButtonClass: "modal__submit-btn_disabled",
   inputErrorClass: "modal__input_error",
-  errorClass: "error__active",
+  errorClass: "error_active",
 };
 
-const hideInputError = (formElement, inputElement) => {
-  const errorMsgElement = document.querySelector(`#${inputElement.id}-error`);
+const hideInputError = (formElement, inputElement, settings) => {
+  const errorMsgElement = formElement.querySelector(
+    `#${inputElement.id}-error`,
+  );
   errorMsgElement.textContent = "";
-  errorMsgElement.classList.remove("error_active");
-  inputElement.classList.remove("modal__input_error");
+  errorMsgElement.classList.remove(settings.errorClass);
+  inputElement.classList.remove(settings.inputErrorClass);
 };
 
 const showInputError = (formElement, inputElement, errorMsg) => {
-  const errorMsgElement = document.querySelector(`#${inputElement.id}-error`);
+  const errorMsgElement = formElement.querySelector(
+    `#${inputElement.id}-error`,
+  );
   errorMsgElement.textContent = errorMsg;
-  errorMsgElement.classList.add("error_active");
-  inputElement.classList.add("modal__input_error");
+  errorMsgElement.classList.add(settings.errorClass);
+  inputElement.classList.add(settings.inputErrorClass);
 };
 
 const checkInputValidity = (formElement, inputElement) => {
@@ -35,20 +39,26 @@ const hasInvalidInput = (inputList) => {
   });
 };
 
-const toggleButtonState = (inputList, submitBtn) => {
+const toggleButtonState = (inputList, submitBtn, settings) => {
   if (hasInvalidInput(inputList)) {
-    submitBtn.disabled = true;
+    disableBtn(submitBtn, settings);
   } else {
-    submitBtn.disabled = false;
+    enableBtn(submitBtn, settings);
   }
 };
 
 const disableBtn = (buttonElement, settings) => {
   buttonElement.disabled = true;
+  buttonElement.classList.add(settings.inactiveButtonClass);
+};
+
+const enableBtn = (buttonElement, settings) => {
+  buttonElement.disabled = false;
+  buttonElement.classList.remove(settings.inactiveButtonClass);
 };
 
 const disableAllSubmitBtns = (buttonElements, settings) => {
-  buttonElements.forEach(disableBtn);
+  buttonElements.forEach((btn) => disableBtn(btn, settings));
 };
 
 const resetValidation = (formElement, settings) => {
