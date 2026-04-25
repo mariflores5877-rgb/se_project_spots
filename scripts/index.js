@@ -70,6 +70,15 @@ const cardsList = document.querySelector(".cards__list");
 
 const modals = document.querySelectorAll(".modal");
 
+function handleEscape(evt) {
+  if (evt.key === "Escape") {
+    const openModal = document.querySelector(".modal_is_opened");
+    if (openModal) {
+      closeModal(openModal);
+    }
+  }
+}
+
 modals.forEach((modal) => {
   modal.addEventListener("mousedown", (evt) => {
     if (evt.target === modal) {
@@ -78,21 +87,14 @@ modals.forEach((modal) => {
   });
 });
 
-document.addEventListener("keydown", (evt) => {
-  if (evt.key === "Escape") {
-    const openModal = document.querySelector(".modal_is_opened");
-    if (openModal) {
-      closeModal(openModal);
-    }
-  }
-});
-
 function openModal(modal) {
   modal.classList.add("modal_is_opened");
+  document.addEventListener("keydown", handleEscape);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is_opened");
+  document.removeEventListener("keydown", handleEscape);
 }
 
 editProfileBtn.addEventListener("click", function () {
@@ -112,8 +114,6 @@ editProfileClosedBtn.addEventListener("click", function () {
 });
 
 newPostBtn.addEventListener("click", function () {
-  newPostForm.reset();
-  resetValidation(newPostForm, settings);
   openModal(newPostModal);
 });
 
@@ -130,8 +130,7 @@ function handleEditProfileSubmit(evt) {
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
   closeModal(editProfileModal);
-  const submitBtn = editProfileForm.querySelector(".modal__submit-btn");
-  submitBtn.disabled = true;
+  disableBtn(cardSubmitButton, settings);
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
@@ -147,7 +146,8 @@ function handleAddCardSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   newPostForm.reset();
-  disableAllSubmitBtns([editProfileSubmitButton, cardSubmitButton], settings);
+  resetValidation(newPostForm, settings);
+  disableBtn(cardSubmitButton, settings);
   closeModal(newPostModal);
 }
 
