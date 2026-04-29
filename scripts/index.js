@@ -100,11 +100,6 @@ function closeModal(modal) {
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
-  toggleButtonState(
-    [editProfileNameInput, editProfileDescriptionInput],
-    editProfileForm.querySelector(".modal__submit-btn"),
-    settings,
-  );
   resetValidation(editProfileForm, settings);
   openModal(editProfileModal);
 });
@@ -130,7 +125,10 @@ function handleEditProfileSubmit(evt) {
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
   closeModal(editProfileModal);
-  disableBtn(cardSubmitButton, settings);
+  disableBtn(
+    editProfileSubmitButton.querySelector(".modal__submit-btn"),
+    settings,
+  );
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
