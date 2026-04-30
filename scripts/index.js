@@ -125,10 +125,7 @@ function handleEditProfileSubmit(evt) {
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
   closeModal(editProfileModal);
-  disableBtn(
-    editProfileSubmitButton.querySelector(".modal__submit-btn"),
-    settings,
-  );
+  disableBtn(editProfileSubmitButton, settings);
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
